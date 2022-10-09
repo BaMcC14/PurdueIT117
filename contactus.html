@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>The Herd-Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+	<style>
+		form {
+			background-color: #bb9457;
+			font-weight: bold;
+			text-transform: uppercase;
+			width: 60%;
+			margin-left: 10%;
+			padding: 25px;
+			}
+		label {
+			background-color: #6f1d1b;
+			color: #ffffff;
+			margin: -15px;
+			padding: 5px;
+			}
+		input, textarea {
+			display: block;
+			margin: 15px;
+			background-color: #f2dfcb;
+			border: 2px #6f1d1b solid;
+			}
+		input[type=radio], input[type=checkbox] {
+			display: inline-block;
+			}
+		select {
+			padding: 2px;
+			margin: 15px;
+			background-color: #f2dfcb;
+			}
+		input[type=reset], input[type=submit], input[type=number] {
+			display: inline-block;
+			padding: 15px;
+			border-radius: 20px;
+			font-weight: bold;
+			}
+		input[type=number] {
+			background-color: #ffffff;
+			}
+
+
+	</style>
+</head>
+
+<body id="container">
+
+	<header>
+		<img src="images/logo.gif" alt="logo for The Herd" width="200" height="200">
+		
+		<h1>Contact The Herd</h1>
+	</header>
+
+<nav>
+	<ul>
+		<li><a href="index.html">Home Page</a></li>
+		<li><a href="aboutus.html">About Us</a></li>
+		<li><a href="history.html">History</a></li>
+		<li><a href="menu.html">Menu</a></li>
+		<li><a href="contactus.html">Contact Us</a></li>
+		<li><a href="chef.html">Chef Page</a></li>
+		<li><a href="visitus.html">Visit Us</a></li>
+	</ul>
+</nav>
+
+<main>
+	<h2>Please Provide Feedback Here.</h2>
+
+
+
+
+	<form action="#" method="post" autocomplete="on">
+
+	<label>First Name:</label>
+		<input type="text" name="fname" required>
+<br>
+	<label>Last Name:</label>
+		<input type="text" name="lname" required>
+<br>
+	<label>Email Address:</label>
+		<input type="email" name="email" autocomplete="off" required>
+<br>
+	<label>Phone Number:</label>
+		<input type="tel" name="phone">
+<br>
+	<label>Feedback:</label>
+		<textarea name="feedback" cols="30" rows="10"></textarea>
+<br>
+	<h3> Enter your four-digit passcode then Click OK:</h3>
+
+	<h4> Passcode will be between 1000 and 9999 </h4>
+
+		<input id="id1" type="number" min="1000" max="9999" name="passcode">
+		<button onclick="myFunction()" type="button">OK</button>
+		<p id="passcode"></p>
+<br>
+	<label>Choose The Number Of Guest</label>
+<br>
+	<input type="radio" name="guest" value="1-2">
+		<label>1-2</label>
+<br>
+	<input type="radio" name="guest" value="3-4">
+		<label>3-5</label>
+<br>
+	<input type="radio" name="guest" value="5-7">
+		<label>5-7</label>
+<br>
+	<input type="radio" name="guest" value="8+">
+		<label>8&#43;</label>
+<br>	
+<br> 
+	<label>What Type Of Meat Was Ordered?</label>
+<br>
+	<input type="checkbox" name="meat" value="beef">
+		<label>Beef</label>
+
+	<input type="checkbox" name="meat" value="pork">
+		<label>Pork</label>
+
+	<input type="checkbox" name="meat" value="chicken">
+		<label>Chicken</label>
+
+	<input type="checkbox" name="meat" value="nomeat">
+		<label>No Meat</label>
+<br>
+<br>
+ <label>What Type Of Payment Was Used?</label>
+<br>
+	<select name="payment">
+		<option value="#">Select One</option>
+		<option value="cc">Credit Card</option>
+		<option value="dc">Debit Card</option>
+		<option value="gc">Gift Card</option>
+		<option value="check">Check</option>
+		<option value="cash">Cash</option>
+	</select>
+<br>
+<br>
+<br>
+<br>
+		<input type="reset" value="Reset Form">
+		<input type="submit" value="Send Form">
+
+	</form>
+</main>
+
+
+<footer>
+ <p>
+	<a href="index.html">Home Page</a> | 
+	<a href="aboutus.html">About Us</a> | 
+	<a href="history.html">History</a> | 
+	<a href="menu.html">Menu</a> | 
+	<a href="contactus.html">Contact Us</a> | 
+	<a href="chef.html">Chef Page</a> | 
+	<a href="visitus.html">Visit Us</a> | 
+</p>
+</footer>
+
+<script>
+ function myFunction() {
+	var inpObj = document.getElementById("id1");
+	if (inpObj.checkValidity() == false ) {
+		document.getElementById("passcode").innerHTML = inpObj.validationMessage; 
+	} else {
+		document.getElementById("passcode").innerHTML = "Passcode Valid";
+	}
+ }
+</script>
+
+</body>
+</html>
